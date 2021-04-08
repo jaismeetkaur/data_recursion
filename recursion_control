@@ -1,0 +1,22 @@
+public class Recursion{
+	
+		public static void main(String[] args){
+			Dog D = new Dog();
+			System.out.println(D.RecurseMe());
+		}
+}
+
+
+class Dog{
+	
+	static int RecursionController = 0;
+
+	public int RecurseMe(){
+	
+		
+		RecursionController++;
+		if (RecursionController <= 100) {return this.RecurseMe();}
+		return RecursionController;	
+	}
+
+}
